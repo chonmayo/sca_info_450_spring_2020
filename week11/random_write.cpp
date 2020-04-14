@@ -11,7 +11,7 @@ int main(){
         myFile << (rand() % 20000 - 10000) << endl;
         i++;
     }
-    while(i<10000);
+    while(i<1000);
     myFile.close();
     system("wc -l randoms.txt");
 }
