@@ -19,11 +19,8 @@ int main()
     while(true){
         printf("Checking balance: $%.2f Savings balance: $%.2f Credit Card balance: $%.2f\n", ch.GetBalance(), s.GetBalance(), cc.GetBalance());
     
-        regex valid_input("\\d{1}");
-        while(!regex_match(to_string(userinput),valid_input)){
-            cout << usermenu << "\nSelect option: ";
-            cin >> userinput;
-        }
+        cout << usermenu << "\nSelect option: ";
+        cin >> userinput;
 
         string name;
         int checknum;
