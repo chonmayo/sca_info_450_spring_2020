@@ -19,8 +19,15 @@ int main()
     while(true){
         printf("Checking balance: $%.2f Savings balance: $%.2f Credit Card balance: $%.2f\n", ch.GetBalance(), s.GetBalance(), cc.GetBalance());
     
-        cout << usermenu << "\nSelect option: ";
+        cin.clear();
+        cout << usermenu << endl << "\nSelect option: ";
         cin >> userinput;
+        while(cin.fail()){
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cout << "Please enter a number 1 through 9: ";
+            cin >> userinput;
+        }
 
         string name;
         int checknum;
