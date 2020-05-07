@@ -1,5 +1,8 @@
 #include <iostream>
-#include "Account.h"
+#include <stdlib.h>
+#include "checking.h"
+#include "creditcard.h"
+#include "savings.h"
 using namespace std;
 int main()
 {
@@ -72,9 +75,11 @@ int main()
                 cc.display();
                 break;
             case 0:
+                cout << "GOODBYE FROM BANK" << endl;
+                exit(0);
                 break;
             default:
-                cout << "ENTER ANOTHER NUMBER >:(" << endl;
+                cout << "ENTER A NUMBER 1-9 >:(" << endl;
         } 
         userinput = -1;
     }
